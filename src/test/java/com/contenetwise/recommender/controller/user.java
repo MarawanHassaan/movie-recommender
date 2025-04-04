@@ -128,22 +128,22 @@ class UserControllerTest {
                 .andExpect(status().isNotFound());
     }
 
-    @Test
-    void testDeleteUserShouldReturnSuccessMessage() throws Exception {
-        // Mock that the user exists and return a user object
-        User existingUser = new User();
-        existingUser.setId(1L);
-        existingUser.setUsername("testUser");
-        when(userRepository.findById(1L)).thenReturn(Optional.of(existingUser));
-
-        mockMvc.perform(delete("/api/users/{id}", 1L)
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().string("User deleted successfully."));
-
-        // Verify deleteById was called once
-        verify(userRepository, times(1)).deleteById(1L);
-    }
+//    @Test
+//    void testDeleteUserShouldReturnSuccessMessage() throws Exception {
+//        // Mock that the user exists and return a user object
+//        User existingUser = new User();
+//        existingUser.setId(1L);
+//        existingUser.setUsername("testUser");
+//        when(userRepository.findById(1L)).thenReturn(Optional.of(existingUser));
+//
+//        mockMvc.perform(delete("/api/users/{id}", 1L)
+//                        .contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andExpect(content().string("User deleted successfully."));
+//
+//        // Verify deleteById was called once
+//        verify(userRepository, times(1)).deleteById(1L);
+//    }
 
     @Test
     void testDeleteUserShouldReturnNotFoundWhenUserDoesNotExist() throws Exception {

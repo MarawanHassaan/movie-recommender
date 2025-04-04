@@ -4,3 +4,395 @@
 2025-04-05 00:04:32 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-04-05 00:04:35 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 12.512 seconds (process running for 14.26)
 2025-04-05 00:04:37 [main] INFO  c.c.r.controllers.GenreController - genres are called
+2025-04-05 00:12:07 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 22728 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 00:12:07 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:12:18 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 00:12:28 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 00:12:30 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 24.459 seconds (process running for 26.057)
+2025-04-05 00:12:32 [main] INFO  c.c.r.controllers.GenreController - Genre with {id} is called
+2025-04-05 00:12:32 [main] INFO  c.c.r.controllers.GenreController - Genre with {id} is called
+2025-04-05 00:12:32 [main] INFO  c.c.r.controllers.GenreController - Genres are called
+2025-04-05 00:12:53 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 812 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 00:12:53 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:12:56 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 00:12:58 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 00:12:59 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 7.287 seconds (process running for 7.806)
+2025-04-05 00:13:06 [http-nio-8080-exec-1] INFO  c.c.r.controllers.GenreController - Genre with {id} is called
+2025-04-05 00:15:11 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 20944 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 00:15:11 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:15:36 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 00:15:54 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 00:16:03 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 53.47 seconds (process running for 57.911)
+2025-04-05 00:16:10 [main] INFO  c.c.r.controllers.GenreController - Genre with 999 is called
+2025-04-05 00:16:10 [main] INFO  c.c.r.controllers.GenreController - Genre with 1 is called
+2025-04-05 00:16:10 [main] INFO  c.c.r.controllers.GenreController - Genres are called
+2025-04-05 00:23:40 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 6852 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 00:23:40 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:23:43 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 00:23:46 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 00:23:47 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 7.541 seconds (process running for 8.145)
+2025-04-05 00:23:48 [http-nio-8080-exec-1] INFO  c.c.r.controllers.GenreController - Genre with 44 is called
+2025-04-05 00:29:43 [http-nio-8080-exec-4] INFO  c.c.r.controllers.GenreController - Genre with 66 is called
+2025-04-05 00:29:44 [http-nio-8080-exec-6] INFO  c.c.r.controllers.GenreController - Genre with 66 is called
+2025-04-05 00:29:45 [http-nio-8080-exec-3] INFO  c.c.r.controllers.GenreController - Genre with 66 is called
+2025-04-05 00:29:53 [http-nio-8080-exec-8] INFO  c.c.r.controllers.GenreController - Genre with 44 is called
+2025-04-05 00:30:00 [http-nio-8080-exec-2] INFO  c.c.r.controllers.GenreController - Genre with 44 is called
+2025-04-05 00:30:02 [http-nio-8080-exec-9] INFO  c.c.r.controllers.GenreController - Genre with 44 is called
+2025-04-05 00:30:12 [http-nio-8080-exec-7] INFO  c.c.r.controllers.GenreController - Genre with 46 is called
+2025-04-05 00:33:18 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 19708 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 00:33:18 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:33:22 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 00:33:26 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 00:33:29 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 11.215 seconds (process running for 12.641)
+2025-04-05 00:33:31 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 00:33:31 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 00:33:31 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 00:33:31 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 00:33:31 [main] INFO  c.c.r.controllers.GenreController - Genres are called
+2025-04-05 00:33:49 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 24352 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 00:33:49 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:33:54 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 00:34:04 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 00:34:07 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 19.255 seconds (process running for 20.356)
+2025-04-05 00:34:09 [http-nio-8080-exec-1] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 44
+2025-04-05 00:34:10 [http-nio-8080-exec-1] INFO  c.c.r.controllers.GenreController - Genre found: GOKU with ID: 44
+2025-04-05 00:34:20 [http-nio-8080-exec-3] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 46
+2025-04-05 00:34:20 [http-nio-8080-exec-3] WARN  c.c.r.controllers.GenreController - Genre with ID 46 not found
+2025-04-05 00:35:34 [http-nio-8080-exec-7] INFO  c.c.r.controllers.GenreController - Genres are called
+2025-04-05 00:42:07 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 23700 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 00:42:07 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:42:10 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 00:42:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 00:42:17 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 10.983 seconds (process running for 12.459)
+2025-04-05 00:42:19 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 00:42:19 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 00:42:19 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 00:42:19 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 00:42:19 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 00:42:19 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 00:42:20 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 00:42:20 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 00:42:20 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 00:42:20 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 00:42:20 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 00:42:20 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 00:42:20 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 00:42:20 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 00:42:41 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 28456 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 00:42:41 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 00:42:46 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 00:42:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 00:42:57 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 16.329 seconds (process running for 17.07)
+2025-04-05 00:43:27 [http-nio-8080-exec-2] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 47
+2025-04-05 00:43:27 [http-nio-8080-exec-2] WARN  c.c.r.controllers.GenreController - Genre with ID 47 not found. Deletion aborted.
+2025-04-05 00:44:02 [http-nio-8080-exec-3] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 44
+2025-04-05 00:44:02 [http-nio-8080-exec-3] INFO  c.c.r.controllers.GenreController - Genre with ID 44 deleted successfully.
+2025-04-05 00:44:46 [http-nio-8080-exec-4] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 46
+2025-04-05 00:44:46 [http-nio-8080-exec-4] WARN  c.c.r.controllers.GenreController - Genre with ID 46 not found. Update failed.
+2025-04-05 00:45:30 [http-nio-8080-exec-5] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 43
+2025-04-05 00:45:30 [http-nio-8080-exec-5] INFO  c.c.r.controllers.GenreController - Genre found with ID: 43. Updating name from 'GOKU' to 'gohan'
+2025-04-05 00:45:30 [http-nio-8080-exec-5] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 43
+2025-04-05 01:00:42 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 10888 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:00:42 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:00:46 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:00:51 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:00:53 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 11.794 seconds (process running for 13.587)
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 01:00:55 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:00:55 [main] WARN  c.c.r.controllers.GenreController - Genre with name 'Action' already exists. Creation aborted.
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Genre created successfully with name: Action
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 01:00:55 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 01:00:55 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 01:00:56 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 01:00:56 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 01:00:56 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: 
+2025-04-05 01:00:56 [main] WARN  c.c.r.controllers.GenreController - Invalid genre name provided: ''
+2025-04-05 01:00:56 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 01:00:56 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 01:00:56 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 01:01:59 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 30076 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:01:59 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:02:01 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:02:05 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:02:09 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 10.238 seconds (process running for 10.716)
+2025-04-05 01:02:36 [http-nio-8080-exec-1] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: vegeta
+2025-04-05 01:02:36 [http-nio-8080-exec-1] INFO  c.c.r.controllers.GenreController - Genre created successfully with name: vegeta
+2025-04-05 01:02:59 [http-nio-8080-exec-4] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: 
+2025-04-05 01:02:59 [http-nio-8080-exec-4] WARN  c.c.r.controllers.GenreController - Invalid genre name provided: ''
+2025-04-05 01:04:17 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 31724 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:04:17 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:04:24 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:04:30 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:04:33 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 17.713 seconds (process running for 23.755)
+2025-04-05 01:04:35 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 01:04:35 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 01:04:35 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-04-05 01:04:35 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-04-05 01:04:35 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 01:04:35 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 01:04:35 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 01:04:35 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 01:04:36 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 01:04:36 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 01:04:36 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 01:04:36 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 01:04:36 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 01:04:36 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-04-05 01:04:36 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 01:04:36 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 01:04:36 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 01:05:30 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 19296 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:05:30 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:05:34 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:05:39 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:05:43 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 12.93 seconds (process running for 14.644)
+2025-04-05 01:05:47 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 01:05:47 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 01:05:47 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:05:47 [main] WARN  c.c.r.controllers.GenreController - Genre with name 'Action' already exists. Creation aborted.
+2025-04-05 01:05:48 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:05:48 [main] INFO  c.c.r.controllers.GenreController - Genre created successfully with name: Action
+2025-04-05 01:05:48 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 01:05:48 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 01:05:48 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 01:05:48 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 01:05:48 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 01:05:48 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 01:05:48 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 01:05:49 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 01:05:49 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 01:05:49 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: 
+2025-04-05 01:05:49 [main] WARN  c.c.r.controllers.GenreController - Invalid genre name provided: ''
+2025-04-05 01:05:49 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 01:05:49 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 01:05:49 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 01:25:15 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 4936 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:25:15 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:25:19 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:25:24 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:25:26 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 11.412 seconds (process running for 13.399)
+2025-04-05 01:25:27 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 01:25:27 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:25:28 [main] WARN  c.c.r.controllers.GenreController - Genre with name 'Action' already exists. Creation aborted.
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Genre created successfully with name: Action
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 01:25:28 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 01:25:28 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: 
+2025-04-05 01:25:28 [main] WARN  c.c.r.controllers.GenreController - Invalid genre name provided: ''
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 01:25:28 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 01:25:29 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:25:29 [main] INFO  c.c.r.controllers.UserController - User created successfully with username: john_doe
+2025-04-05 01:25:29 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:25:29 [main] WARN  c.c.r.controllers.UserController - User with username 'john_doe' already exists. Creation aborted.
+2025-04-05 01:25:29 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: 
+2025-04-05 01:25:46 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 26604 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:25:46 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:25:49 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:25:52 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:25:53 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 7.541 seconds (process running for 8.453)
+2025-04-05 01:26:04 [http-nio-8080-exec-3] INFO  c.c.r.controllers.UserController - Create request received for user with username: mmaarroo
+2025-04-05 01:26:04 [http-nio-8080-exec-3] INFO  c.c.r.controllers.UserController - User created successfully with username: mmaarroo
+2025-04-05 01:26:38 [http-nio-8080-exec-7] INFO  c.c.r.controllers.UserController - Create request received for user with username: 
+2025-04-05 01:29:43 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 708 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:29:43 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:29:48 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:30:04 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:30:08 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 24.689 seconds (process running for 26.207)
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 01:30:10 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:30:10 [main] WARN  c.c.r.controllers.GenreController - Genre with name 'Action' already exists. Creation aborted.
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Genre created successfully with name: Action
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 01:30:10 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 01:30:10 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: 
+2025-04-05 01:30:10 [main] WARN  c.c.r.controllers.GenreController - Invalid genre name provided: ''
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 01:30:10 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 01:30:11 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:30:11 [main] INFO  c.c.r.controllers.UserController - User created successfully with username: john_doe
+2025-04-05 01:30:11 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:30:11 [main] WARN  c.c.r.controllers.UserController - User with username 'john_doe' already exists. Creation aborted.
+2025-04-05 01:30:11 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: 
+2025-04-05 01:30:11 [main] WARN  c.c.r.controllers.UserController - Invalid genre name provided: ''
+2025-04-05 01:30:33 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 28124 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:30:33 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:30:36 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:30:39 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:30:40 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 7.692 seconds (process running for 8.256)
+2025-04-05 01:30:44 [http-nio-8080-exec-1] INFO  c.c.r.controllers.UserController - Create request received for user with username: maro
+2025-04-05 01:30:44 [http-nio-8080-exec-1] INFO  c.c.r.controllers.UserController - User created successfully with username: maro
+2025-04-05 01:30:58 [http-nio-8080-exec-3] INFO  c.c.r.controllers.UserController - Create request received for user with username: 
+2025-04-05 01:30:58 [http-nio-8080-exec-3] WARN  c.c.r.controllers.UserController - Invalid genre name provided: ''
+2025-04-05 01:36:27 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 516 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:36:27 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:36:31 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:36:35 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:36:38 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 11.68 seconds (process running for 13.272)
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 01:36:40 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:36:40 [main] WARN  c.c.r.controllers.GenreController - Genre with name 'Action' already exists. Creation aborted.
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Genre created successfully with name: Action
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 01:36:40 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 01:36:40 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: 
+2025-04-05 01:36:40 [main] WARN  c.c.r.controllers.GenreController - Invalid genre name provided: ''
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 01:36:40 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 01:36:41 [main] INFO  c.c.r.controllers.UserController - Get request called for all users
+2025-04-05 01:36:41 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:36:41 [main] INFO  c.c.r.controllers.UserController - User created successfully with username: john_doe
+2025-04-05 01:36:41 [main] INFO  c.c.r.controllers.UserController - Request called for user with ID: 999
+2025-04-05 01:36:41 [main] WARN  c.c.r.controllers.UserController - User with ID 999 not found
+2025-04-05 01:36:41 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:36:41 [main] WARN  c.c.r.controllers.UserController - User with username 'john_doe' already exists. Creation aborted.
+2025-04-05 01:36:41 [main] INFO  c.c.r.controllers.UserController - Request called for user with ID: 1
+2025-04-05 01:36:41 [main] INFO  c.c.r.controllers.UserController - User found: john_doe with ID: 1
+2025-04-05 01:36:41 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: 
+2025-04-05 01:36:41 [main] WARN  c.c.r.controllers.UserController - Invalid genre name provided: ''
+2025-04-05 01:37:28 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 15464 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:37:28 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:37:34 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:37:45 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:37:47 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 20.109 seconds (process running for 20.737)
+2025-04-05 01:37:48 [http-nio-8080-exec-6] INFO  c.c.r.controllers.UserController - Request called for user with ID: 67
+2025-04-05 01:37:48 [http-nio-8080-exec-6] INFO  c.c.r.controllers.UserController - User found: maro with ID: 67
+2025-04-05 01:37:54 [http-nio-8080-exec-2] INFO  c.c.r.controllers.UserController - Request called for user with ID: 69
+2025-04-05 01:37:54 [http-nio-8080-exec-2] WARN  c.c.r.controllers.UserController - User with ID 69 not found
+2025-04-05 01:42:41 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 21312 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:42:41 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:43:02 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:43:14 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:43:20 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 39.802 seconds (process running for 42.596)
+2025-04-05 01:43:24 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 01:43:24 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 01:43:24 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:43:24 [main] WARN  c.c.r.controllers.GenreController - Genre with name 'Action' already exists. Creation aborted.
+2025-04-05 01:43:24 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:43:24 [main] INFO  c.c.r.controllers.GenreController - Genre created successfully with name: Action
+2025-04-05 01:43:24 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 01:43:24 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 01:43:25 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: 
+2025-04-05 01:43:25 [main] WARN  c.c.r.controllers.GenreController - Invalid genre name provided: ''
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 01:43:25 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 01:43:26 [main] INFO  c.c.r.controllers.UserController - Update request received for user with ID: 1
+2025-04-05 01:43:26 [main] INFO  c.c.r.controllers.UserController - User found with ID: 1. Updating username from 'john_doe' to 'john_updated'
+2025-04-05 01:43:26 [main] INFO  c.c.r.controllers.UserController - User updated successfully with ID: 1
+2025-04-05 01:43:26 [main] INFO  c.c.r.controllers.UserController - Get request called for all users
+2025-04-05 01:43:26 [main] INFO  c.c.r.controllers.UserController - Delete request received for user with ID: 999
+2025-04-05 01:43:26 [main] WARN  c.c.r.controllers.UserController - User with ID 999 not found. Deletion aborted.
+2025-04-05 01:43:26 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:43:26 [main] INFO  c.c.r.controllers.UserController - User created successfully with username: john_doe
+2025-04-05 01:43:27 [main] INFO  c.c.r.controllers.UserController - Delete request received for user with ID: 1
+2025-04-05 01:43:27 [main] WARN  c.c.r.controllers.UserController - User with ID 1 not found. Deletion aborted.
+2025-04-05 01:43:27 [main] INFO  c.c.r.controllers.UserController - Request called for user with ID: 999
+2025-04-05 01:43:27 [main] WARN  c.c.r.controllers.UserController - User with ID 999 not found
+2025-04-05 01:43:27 [main] INFO  c.c.r.controllers.UserController - Update request received for user with ID: 999
+2025-04-05 01:43:27 [main] WARN  c.c.r.controllers.UserController - User with ID 999 not found. Update failed.
+2025-04-05 01:43:27 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:43:27 [main] WARN  c.c.r.controllers.UserController - User with username 'john_doe' already exists. Creation aborted.
+2025-04-05 01:43:27 [main] INFO  c.c.r.controllers.UserController - Request called for user with ID: 1
+2025-04-05 01:43:27 [main] INFO  c.c.r.controllers.UserController - User found: john_doe with ID: 1
+2025-04-05 01:43:27 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: 
+2025-04-05 01:43:27 [main] WARN  c.c.r.controllers.UserController - Invalid genre name provided: ''
+2025-04-05 01:46:50 [main] INFO  c.c.r.controller.GenreControllerTest - Starting GenreControllerTest using Java 21.0.6 with PID 3452 (started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:46:50 [main] INFO  c.c.r.controller.GenreControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:46:55 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:47:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:47:03 [main] INFO  c.c.r.controller.GenreControllerTest - Started GenreControllerTest in 14.351 seconds (process running for 16.159)
+2025-04-05 01:47:05 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 999
+2025-04-05 01:47:05 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Update failed.
+2025-04-05 01:47:05 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:47:05 [main] WARN  c.c.r.controllers.GenreController - Genre with name 'Action' already exists. Creation aborted.
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: Action
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Genre created successfully with name: Action
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 999
+2025-04-05 01:47:06 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Request called for genre with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Genre found: Action with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Genre with ID 1 deleted successfully.
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Get request called for all genres
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Delete request received for genre with ID: 999
+2025-04-05 01:47:06 [main] WARN  c.c.r.controllers.GenreController - Genre with ID 999 not found. Deletion aborted.
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Create request received for genre with name: 
+2025-04-05 01:47:06 [main] WARN  c.c.r.controllers.GenreController - Invalid genre name provided: ''
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Update request received for genre with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Genre found with ID: 1. Updating name from 'Action' to 'Adventure'
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.GenreController - Genre updated successfully with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Update request received for user with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - User found with ID: 1. Updating username from 'john_doe' to 'john_updated'
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - User updated successfully with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Get request called for all users
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Delete request received for user with ID: 999
+2025-04-05 01:47:06 [main] WARN  c.c.r.controllers.UserController - User with ID 999 not found. Deletion aborted.
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - User created successfully with username: john_doe
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Request called for user with ID: 999
+2025-04-05 01:47:06 [main] WARN  c.c.r.controllers.UserController - User with ID 999 not found
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Update request received for user with ID: 999
+2025-04-05 01:47:06 [main] WARN  c.c.r.controllers.UserController - User with ID 999 not found. Update failed.
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: john_doe
+2025-04-05 01:47:06 [main] WARN  c.c.r.controllers.UserController - User with username 'john_doe' already exists. Creation aborted.
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Request called for user with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - User found: john_doe with ID: 1
+2025-04-05 01:47:06 [main] INFO  c.c.r.controllers.UserController - Create request received for user with username: 
+2025-04-05 01:47:06 [main] WARN  c.c.r.controllers.UserController - Invalid genre name provided: ''
+2025-04-05 01:47:23 [restartedMain] INFO  c.c.r.RecommenderApplication - Starting RecommenderApplication using Java 21.0.6 with PID 6328 (C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender\target\classes started by marawan.hassaan in C:\Users\Marawan.Hassaan\Desktop\contentwise\recommender_new - after grafana-prom before log\recommender)
+2025-04-05 01:47:23 [restartedMain] INFO  c.c.r.RecommenderApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-05 01:47:26 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgresPlusDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 01:47:29 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 01:47:33 [restartedMain] INFO  c.c.r.RecommenderApplication - Started RecommenderApplication in 10.365 seconds (process running for 10.83)
+2025-04-05 01:47:37 [http-nio-8080-exec-5] INFO  c.c.r.controllers.UserController - Delete request received for user with ID: 69
+2025-04-05 01:47:37 [http-nio-8080-exec-5] WARN  c.c.r.controllers.UserController - User with ID 69 not found. Deletion aborted.
+2025-04-05 01:48:13 [http-nio-8080-exec-7] INFO  c.c.r.controllers.UserController - Delete request received for user with ID: 67
+2025-04-05 01:48:13 [http-nio-8080-exec-7] INFO  c.c.r.controllers.UserController - User with ID 67 deleted successfully.
+2025-04-05 01:48:33 [http-nio-8080-exec-4] INFO  c.c.r.controllers.UserController - Update request received for user with ID: 61
+2025-04-05 01:48:33 [http-nio-8080-exec-4] INFO  c.c.r.controllers.UserController - User found with ID: 61. Updating username from 'mmaarroo' to 'maro'
+2025-04-05 01:48:33 [http-nio-8080-exec-4] INFO  c.c.r.controllers.UserController - User updated successfully with ID: 61
