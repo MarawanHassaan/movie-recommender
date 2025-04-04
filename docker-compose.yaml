@@ -1,0 +1,61 @@
+services:
+  db:
+    image: postgres
+    container_name: my-postgres
+    ports:
+      - "5444:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: rcmd
+    restart: unless-stopped
+    #volumes:
+    #  - pgdata:/var/lib/postgresql/data
+
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-spring-boot-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/rcmd
+#      SPRING_DATASOURCE_USERNAME: postgres
+#      SPRING_DATASOURCE_PASSWORD: 123456
+
+
+  prometheus:
+    image: prom/prometheus:v2.35.0
+    container_name: prometheus
+    restart: unless-stopped
+    volumes:
+      - ./data/prometheus/config:/etc/prometheus/
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yaml"
+    ports:
+      - 9090:9090
+
+
+  grafana:
+    image: grafana/grafana-oss:8.5.2
+    pull_policy: always
+    container_name: grafana
+    restart: unless-stopped
+    user: root
+    ports:
+      - 3000:3000 # access grafana url
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_SERVER_DOMAIN=localhost
+      # Enabled for logging
+      - GF_LOG_MODE=console file
+      - GF_LOG_FILTERS=alerting.notifier.slack:debug alertmanager:debug ngalert:debug
