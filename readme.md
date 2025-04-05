@@ -4,8 +4,12 @@ It tracks the movie, genre and user database. Besides it keeps track of rankings
 
 
 ### Features
-
-
+* Retrieve a list of all movies belonging to a genre.
+* Retrieve a list of all movies having an average rating above/below a certain value.
+* Retrieve a list of user's interactions to movies (rating or view percentage).
+* Add a new user's interaction to movie (rating or view percentage) .
+* Recommend a list of movies to a user based on their preferences and history of interactions.
+* Search for a list of movies matching a certain genre or a keyword in movie title.
 
 ### Technology Stack
 ![My Skills](https://skillicons.dev/icons?i=java,spring,maven,postgres,linux,docker,git,prometheus,grafana )
