@@ -12,7 +12,7 @@ It tracks the movie, genre and user database. Besides it keeps track of rankings
 * Search for a list of movies matching a certain genre or a keyword in movie title.
 
 ### Technology Stack
-![My Skills](https://skillicons.dev/icons?i=java,spring,maven,postgres,linux,docker,git,prometheus,grafana )
+![Technology Stack](https://skillicons.dev/icons?i=java,spring,maven,postgres,linux,docker,git,prometheus,grafana )
 
 ### Database
 For production the application is using Postgres, while it automatically switches to H2 database when running the test cases
@@ -80,6 +80,9 @@ try out the endpoints directly through the Swagger UI at the following link:
 This interface allows you to view available endpoints, their parameters, request and response structures, and even make test calls to the API without writing any code. 
 It's a valuable tool for both development and understanding how to interact with 
 the application programmatically. The API specification is automatically generated based on annotations within the Spring Boot application code, ensuring it stays up-to-date with the implemented endpoints.
+
+![Alt Swagger](public/openapi/swagger.png)
+
 ### Prometheus
 This application relies on data collected by Prometheus. To enable and modify Prometheus to scrape metrics from your Spring Boot application, check the yaml file in `data/prometheus/config/prometheus.yaml`
 It has a job to target Spring Boot application's `/actuator/prometheus` endpoint. For example, if Spring Boot app runs on `localhost:8080` it uses `localhost:8080/actuator/prometheus`
