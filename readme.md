@@ -28,6 +28,8 @@ Overview of Tables and Relationships:
 
 This schema provides the foundation for storing user data, movie information, genre classifications, and user-generated rankings, along with the relationships between these entities.
 
+![Alt Database Schema](public/database/database-schema.png)
+
 ### Getting Started
 
 #### Prerequisites
@@ -81,11 +83,15 @@ the application programmatically. The API specification is automatically generat
 ### Prometheus
 This application relies on data collected by Prometheus. To enable and modify Prometheus to scrape metrics from your Spring Boot application, check the yaml file in `data/prometheus/config/prometheus.yaml`
 It has a job to target Spring Boot application's `/actuator/prometheus` endpoint. For example, if Spring Boot app runs on `localhost:8080` it uses `localhost:8080/actuator/prometheus`
+
+![Alt Prometheus](public/prometheus/prometheus.png)
+
 ### Grafana
 This project includes a Grafana dashboard for visualizing application performance, endpoints monitoring and analytics 
 You can access the Grafana instance running locally at:
 
 [http://localhost:3000](http://localhost:3000)
+
 
 **Default Credentials**
 
@@ -96,3 +102,4 @@ You can access the Grafana instance running locally at:
 
 * The data source for this dashboard is Prometheus running on port 9090 pulling the data from our Spring Boot Application.
 * The dashboard definition can be found in `public/grafana/dashboard.json`. You can import this JSON into your local Grafana instance if needed.
+![Alt Grafana](public/grafana/grafana.png)
