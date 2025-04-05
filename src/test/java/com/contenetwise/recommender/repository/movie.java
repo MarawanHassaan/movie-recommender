@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
@@ -19,7 +20,8 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@Transactional  // Automatically rolls back the transaction after each test
+@Transactional
+@ActiveProfiles("test") // Automatically rolls back the transaction after each test
 class MovieRepositoryTest {
 
     @Autowired
