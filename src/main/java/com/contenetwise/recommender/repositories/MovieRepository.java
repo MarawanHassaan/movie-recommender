@@ -36,6 +36,33 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     ) >= :minRanking
    \s""")
     List<Movie> findByMinRanking(@Param("minRanking") double minRanking);
+
+    @Query("""
+    SELECT m FROM Movie m
+    JOIN m.rankings r
+    WHERE r.rank1 IS NOT NULL OR r.rank2 IS NOT NULL
+    GROUP BY m
+    HAVING AVG(
+        CASE
+            WHEN r.rank1 IS NOT NULL THEN r.rank1
+            WHEN r.rank2 IS NOT NULL THEN
+                CASE
+                    WHEN r.rank2 BETWEEN 0 AND 20 THEN 1
+                    WHEN r.rank2 BETWEEN 21 AND 40 THEN 2
+                    WHEN r.rank2 BETWEEN 41 AND 60 THEN 3
+                    WHEN r.rank2 BETWEEN 61 AND 80 THEN 4
+                    WHEN r.rank2 BETWEEN 81 AND 100 THEN 5
+                    ELSE NULL
+                END
+            ELSE NULL
+        END
+    ) <= :maxRanking
+""")
+    List<Movie> findByMaxRanking(@Param("maxRanking") double maxRanking);
+
+
+
+
     @Query("SELECT m FROM Movie m JOIN m.genres g WHERE g.name IN :genreNames")
     List<Movie> findByGenreNames(@Param("genreNames") Set<String> genreNames);
 

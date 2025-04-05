@@ -102,6 +102,36 @@ public class MovieController {
 
         return ResponseEntity.ok(responseDTO);
     }
+
+
+    @GetMapping("/by-max-ranking")
+    public ResponseEntity<ResponseDTO> getMoviesByMaxRanking(@RequestParam double maxRanking) {
+        logger.info("Request received to get movies with maximum ranking: {}", maxRanking);
+        List<Movie> movies = movieRepository.findByMaxRanking(maxRanking);
+        if (movies.isEmpty()) {
+            logger.warn("No movies found with maximum ranking: {}", maxRanking);
+            return ResponseEntity.noContent().build();
+        }
+
+        logger.info("Found {} movies with maximum ranking: {}", movies.size(), maxRanking);
+        List<MovieRequest> movieDTOs = movies.stream()
+                .map(movie -> {
+                    MovieRequest movieDTO = new MovieRequest();
+                    movieDTO.setTitle(movie.getTitle());
+                    movieDTO.setGenres(movie.getGenres().stream()
+                            .map(Genre::getName)
+                            .collect(Collectors.toSet()));
+                    return movieDTO;
+                })
+                .collect(Collectors.toList());
+
+        ResponseDTO responseDTO = new ResponseDTO();
+        responseDTO.setMovies(movieDTOs);
+
+        return ResponseEntity.ok(responseDTO);
+    }
+
+
     @Operation(summary = "Search movies", description = "Return a search result based on title or genre")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Successful retrieval"),
