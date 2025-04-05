@@ -15,6 +15,8 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,6 +35,8 @@ public class RankingController {
     private final RankingRepository rankingRepository;
     private final UserRepository userRepository;
     private final MovieRepository movieRepository;
+    private static final Logger logger = LoggerFactory.getLogger(RankingController.class);
+
     public RankingController(RankingRepository rankingRepository, UserRepository userRepository, MovieRepository movieRepository) {
         this.rankingRepository = rankingRepository;
         this.userRepository = userRepository;
@@ -50,24 +54,30 @@ public class RankingController {
             @PathVariable Long userId,
             @RequestParam(required = false, defaultValue = "both") String type) {
 
+        logger.info("Request received for user rankings with userId: {} and type: {}", userId, type);
         List<Ranking> rankings;
 
         switch (type.toLowerCase()) {
             case "rank1":
+                logger.info("Fetching rankings for userId: {} with rank type 'rank1'", userId);
                 rankings = rankingRepository.findByUserRank1Only(userId);
                 break;
             case "rank2":
+                logger.info("Fetching rankings for userId: {} with rank type 'rank2'", userId);
                 rankings = rankingRepository.findByUserRank2Only(userId);
                 break;
             case "both":
             default:
+                logger.info("Fetching both rank types for userId: {}", userId);
                 rankings = rankingRepository.findByUser(userId);
                 break;
         }
 
         if (rankings.isEmpty()) {
+            logger.warn("No rankings found for userId: {} with type: {}", userId, type);
             return ResponseEntity.noContent().build();
         }
+        logger.info("Found {} rankings for userId: {} with type: {}", rankings.size(), userId, type);
         List<RankingDTOResponse> rankingDTOs = rankings.stream()
                 .map(RankingDTOResponse::new)
                 .toList();
@@ -87,13 +97,17 @@ public class RankingController {
             @RequestParam(required = false) Integer rank1,
             @RequestParam(required = false) Integer rank2) {
 
+        logger.info("Received request to create or update ranking for userId: {} and movieId: {}", userId, movieId);
         // Validate rank1 and rank2 - at least one must be present, but not both
         if ((rank1 == null && rank2 == null) || (rank1 != null && rank2 != null)) {
+            logger.warn("Bad request for userId: {} and movieId: {}. Both rank1 and rank2 are either null or both are provided.", userId, movieId);
             return ResponseEntity.badRequest().body("You must provide either rank1 or rank2, but not both.");
         }
 
         // Retrieve the user and movie
+        logger.info("Retrieving user with userId: {}", userId);
         User user = userRepository.findById(userId).orElse(null);
+        logger.info("Retrieving movie with movieId: {}", movieId);
         Movie movie = movieRepository.findById(movieId).orElse(null);
 
         if (user == null) {
@@ -109,9 +123,11 @@ public class RankingController {
         if (existingRanking != null) {
             // Update the existing ranking
             if (rank1 != null) {
+                logger.info("Updated rank1 for userId: {} and movieId: {} to {}", userId, movieId, rank1);
                 existingRanking.setRank1(rank1);
             }
             if (rank2 != null) {
+                logger.info("Updated rank2 for userId: {} and movieId: {} to {}", userId, movieId, rank2);
                 existingRanking.setRank2(rank2);
             }
             rankingRepository.save(existingRanking);
@@ -124,6 +140,7 @@ public class RankingController {
             newRanking.setRank1(rank1);
             newRanking.setRank2(rank2);
             rankingRepository.save(newRanking);
+            logger.info("New ranking created successfully for userId: {} and movieId: {}", userId, movieId);
             return ResponseEntity.ok("Ranking created successfully.");
         }
     }
@@ -135,9 +152,11 @@ public class RankingController {
     })
     @GetMapping("/user/{userId}/recommendations")
     public ResponseEntity<ResponseDTO> recommendMovies(@PathVariable Long userId) {
+        logger.info("Received request for movie recommendations for userId: {}", userId);
         // Get the user
         User user = userRepository.findById(userId).orElse(null);
         if (user == null) {
+            logger.warn("User with userId: {} not found. Returning bad request response.", userId);
             return ResponseEntity.badRequest().build();
         }
 
@@ -148,6 +167,7 @@ public class RankingController {
                 .collect(Collectors.toList());
 
         if (highlyRatedRankings.isEmpty()) {
+            logger.info("No highly rated rankings found for userId: {}. No recommendations available.", userId);
             return ResponseEntity.ok((ResponseDTO) Collections.emptyList()); // No recommendations if no high ratings
         }
 
@@ -170,6 +190,7 @@ public class RankingController {
                 .collect(Collectors.toList());
 
         // Optional: Sort by the number of times the movie was rated (popularity)
+        logger.info("Sorting recommended movies based on popularity for userId: {}", userId);
         filteredMovies.sort(Comparator.comparingInt(movie -> rankingRepository.countByMovie(movie)));
 
         List<MovieRequest> movieRequests = filteredMovies.stream()
@@ -184,6 +205,7 @@ public class RankingController {
                 .collect(Collectors.toList());
 
         // Wrap in ResponseDTO
+        logger.info("Returning recommendations for userId: {} with {} movies", userId, movieRequests.size());
         ResponseDTO response = new ResponseDTO();
         response.setMovies(movieRequests);
 
