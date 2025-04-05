@@ -29,7 +29,20 @@ Overview of Tables and Relationships:
 This schema provides the foundation for storing user data, movie information, genre classifications, and user-generated rankings, along with the relationships between these entities.
 
 ### Getting Started
+
 #### Prerequisites
+Before you start building or running the REST API using Spring Boot, make sure you have the following installed and set up:
+
+1. Java Development Kit (JDK):
+   Version Java 21 or higher (depending on your Spring Boot version).
+   Check this step by running `java -version` in your terminal.
+
+2. Maven: Used for project build and dependency management. Check this by running `mvn -v`.
+
+3. Spring Boot:
+   You don't need to install Spring Boot manually — it's managed by Maven. Use Spring Iniliazer to bootstrap your project.
+
+4. IDE: For example IntelliJ IDEA (preferred with Spring plugin).
 
 #### Installation
 1- Clone the repository
@@ -37,8 +50,11 @@ This schema provides the foundation for storing user data, movie information, ge
 git clone 
 ```
 2- Ensure docker service is running
-
-3- run the docker compose file
+``` console
+docker --version
+docker info
+```
+3- Run the docker compose file
 ``` console
 docker compose up
 ```
@@ -46,6 +62,11 @@ docker compose up
 ```console
 docker ps
 ```
+You should see the following docker containers running:
+* postgres
+* spring-boot
+* prometheus
+* grafana
 
 ### API specification
 This project utilizes Swagger (OpenAPI) to document and provide an interactive interface for exploring the application's API. 
