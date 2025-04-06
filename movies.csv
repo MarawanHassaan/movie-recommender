@@ -1,0 +1,21 @@
+movie_id,title,genres
+1,Toy Story,Adventure|Animation|Children|Comedy|Fantasy
+2,Grumpier Old Men,Comedy|Romance
+3,Die Hard,Action|Thriller
+4,Star Wars: Return of the Jedi,Action|Adventure|Fantasy|Sci-Fi
+5,The Lion King,Adventure|Animation|Children|Drama|Musical
+6,Pulp Fiction,Crime|Drama|Thriller
+7,Forrest Gump,Comedy|Drama|Romance
+8,The Matrix,Action|Sci-Fimovie_id,title,genres
+                          1,Toy Story,Adventure|Animation|Children|Comedy|Fantasy
+                          2,Grumpier Old Men,Comedy|Romance
+                          3,Die Hard,Action|Thriller
+                          4,Star Wars: Return of the Jedi,Action|Adventure|Fantasy|Sci-Fi
+                          5,The Lion King,Adventure|Animation|Children|Drama|Musical
+                          6,Pulp Fiction,Crime|Drama|Thriller
+                          7,Forrest Gump,Comedy|Drama|Romance
+                          8,The Matrix,Action|Sci-Fi
+                          9,Goodfellas,Biography|Crime|Drama
+                          10,Jurassic Park,Adventure|Sci-Fi|Thriller
+9,Goodfellas,Biography|Crime|Drama
+10,Jurassic Park,Adventure|Sci-Fi|Thriller
