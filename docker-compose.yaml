@@ -23,6 +23,8 @@ services:
     depends_on:
       - db
     restart: unless-stopped
+    volumes:
+      - ./docker-logs:/app/logs
 
 #    environment:
 #      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/rcmd

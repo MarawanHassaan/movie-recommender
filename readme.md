@@ -150,6 +150,10 @@ Before you start building or running the REST API using Spring Boot, make sure y
 ``` console
 git clone 
 ```
+2- Build the latest jar in addition to running unit tests
+```console
+mvn clean package
+```
 2- Ensure docker service is running
 ``` console
 docker --version
@@ -181,6 +185,74 @@ It's a valuable tool for both development and understanding how to interact with
 the application programmatically. The API specification is automatically generated based on annotations within the Spring Boot application code, ensuring it stays up-to-date with the implemented endpoints.
 
 ![Alt Swagger](public/openapi/swagger.png)
+
+### Examples
+#### Return a list of movies belonging to Action genre
+
+* Request: GET `http://localhost:8080/api/movies/by-genre?genre=Action`
+
+* Response:
+`
+{
+    "movies": [
+        {
+            "title": "Die Hard",
+            "genres": [
+                "Action",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Star Wars: Return of the Jedi",
+            "genres": [
+                "Sci-Fi",
+                "Action",
+                "Adventure",
+                "Fantasy"
+            ]
+        },
+        {
+            "title": "The Matrix",
+            "genres": [
+                "Sci-Fi",
+                "Action"
+            ]
+        }
+    ]
+}
+`
+#### Return a list of movies ranking higher than a specific number
+* Request: GET `http://localhost:8080/api/movies/by-min-ranking?minRanking=4`
+* Response:
+`
+{
+    "movies": [
+        {
+            "title": "Star Wars: Return of the Jedi",
+            "genres": [
+                "Action",
+                "Sci-Fi",
+                "Adventure",
+                "Fantasy"
+            ]
+        },
+        {
+            "title": "Toy Story",
+            "genres": [
+                "Adventure",
+                "Fantasy",
+                "Animation",
+                "Comedy",
+                "Children"
+            ]
+        }
+    ]
+}
+`
+#### Add a new ranking of a user to a specific movie
+* Request: POST `http://localhost:8080/api/rankings/user/1/movie/10?rank1=3`
+* Response:
+  `Ranking created successfully.`
 
 ### Prometheus
 This application relies on data collected by Prometheus. To enable and modify Prometheus to scrape metrics from your Spring Boot application, check the yaml file in `data/prometheus/config/prometheus.yaml`
