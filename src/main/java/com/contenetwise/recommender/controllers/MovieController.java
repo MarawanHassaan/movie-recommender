@@ -220,5 +220,68 @@ public class MovieController {
         return ResponseEntity.ok(responseDTO);
     }
 
+    @Operation(summary = "Get a list of movies available", description = "Retrieval a list of movie")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Successful retrieval"),
+    })
+    @GetMapping
+    public ResponseEntity<List<MovieRequest>> getAllMovies() {
+        logger.info("Request received to get movies");
+
+        List<Movie> movies = movieRepository.findAll();
+
+        List<MovieRequest> movieRequests = movies.stream().map(movie -> {
+            MovieRequest dto = new MovieRequest();
+            dto.setTitle(movie.getTitle());
+            Set<String> genres = movie.getGenres().stream()
+                    .map(g -> g.getName())
+                    .collect(Collectors.toSet());
+            dto.setGenres(genres);
+            return dto;
+        }).collect(Collectors.toList());
+
+        return ResponseEntity.ok(movieRequests);
+    }
+
+    @Operation(summary = "Get a movie by ID", description = "Retrieval of movie with ID")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Successful retrieval"),
+            @ApiResponse(responseCode = "404", description = "Movies not found")
+
+    })
+    @GetMapping("/{id}")
+    public ResponseEntity<MovieRequest> getMovieById(@PathVariable Long id) {
+        logger.info("Request received to get movie with id {}", id);
+        return movieRepository.findById(id)
+                .map(movie -> {
+                    MovieRequest dto = new MovieRequest();
+                    dto.setTitle(movie.getTitle());
+                    Set<String> genres = movie.getGenres().stream()
+                            .map(g -> g.getName())
+                            .collect(Collectors.toSet());
+                    dto.setGenres(genres);
+                    return ResponseEntity.ok(dto);
+                })
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @Operation(summary = "Delete a movie", description = "Delete of movie with ID")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Successful deletion"),
+            @ApiResponse(responseCode = "404", description = "Movies not found")
+
+    })
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteMovie(@PathVariable Long id) {
+        logger.info("Request received to delete movie with id {}", id);
+        if (movieRepository.existsById(id)) {
+            movieRepository.deleteById(id);
+            return ResponseEntity.ok("Movie deleted successfully.");
+            // HTTP 204 No Content
+        } else {
+            return ResponseEntity.notFound().build(); // HTTP 404 Not Found
+        }
+    }
+
 
 }
