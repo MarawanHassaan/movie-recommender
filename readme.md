@@ -11,6 +11,36 @@ It tracks the movie, genre and user database. Besides it keeps track of rankings
 * Recommend a list of movies to a user based on their preferences and history of interactions.
 * Search for a list of movies matching a certain genre or a keyword in movie title.
 
+### Tree Directory
+```console
+├───.mvn
+├───data
+│   ├───grafana
+│   └───prometheus
+├───logs
+├───public
+│   ├───database
+│   ├───grafana
+│   ├───openapi
+│   └───prometheus
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───contenetwise
+│   │   │           └───recommender
+│   │   │               ├───controllers
+│   │   │               ├───domain
+│   │   │               ├───dto
+│   │   │               └───repositories
+│   │   └───resources
+│   │       ├───static
+│   │       └───templates
+│   └───test
+└───target
+```
+
+
 ### Technology Stack
 ![Technology Stack](https://skillicons.dev/icons?i=java,spring,maven,postgres,linux,docker,git,prometheus,grafana )
 
@@ -31,6 +61,8 @@ It tracks the movie, genre and user database. Besides it keeps track of rankings
 7- Prometheus
 
 8- Grafana
+
+
 ### Database
 The application uses a database to maintain data persistence. For production the application is using Postgres, while it automatically switches to H2 database when running the test cases.
 
