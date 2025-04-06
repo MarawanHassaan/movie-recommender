@@ -32,7 +32,7 @@ INSERT INTO genres (name) VALUES
 ('Adventure'), -- 1
 ('Animation'), -- 2
 ('Action'),    -- 3
-('Biography'); -- 4
+('Biography'), -- 4
 ('Children'),  -- 5
 ('Crime'),     -- 6
 ('Comedy'),    -- 7
