@@ -16,11 +16,11 @@ public interface RankingRepository extends JpaRepository<Ranking, Long> {
     @Query("SELECT r FROM Ranking r WHERE r.user.id = :userId")
     List<Ranking> findByUser(@Param("userId") Long userId);
 
-    // Retrieve only rank1 for a user (ignores entries where rank1 is null)
+    // Retrieve only rank1 for a user
     @Query("SELECT r FROM Ranking r WHERE r.user.id = :userId AND r.rank1 IS NOT NULL")
     List<Ranking> findByUserRank1Only(@Param("userId") Long userId);
 
-    // Retrieve only rank2 for a user (ignores entries where rank2 is null)
+    // Retrieve only rank2 for a user
     @Query("SELECT r FROM Ranking r WHERE r.user.id = :userId AND r.rank2 IS NOT NULL")
     List<Ranking> findByUserRank2Only(@Param("userId") Long userId);
 

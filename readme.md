@@ -11,7 +11,7 @@ It tracks the movie, genre and user database. Besides it keeps track of rankings
 * Recommend a list of movies to a user based on their preferences and history of interactions.
 * Search for a list of movies matching a certain genre or a keyword in movie title.
 
-### Tree Directory
+### Project Tree
 ```console
 ├───.mvn
 ├───data

@@ -25,7 +25,7 @@ class GenreRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        // Prepare the data before each test
+        // Initialize Genre
         actionGenre = Genre.builder()
                 .name("Action-test2")
                 .build();
@@ -44,10 +44,8 @@ class GenreRepositoryTest {
 
     @Test
     void testFindByNameShouldReturnEmptyWhenNotExists() {
-        // Try to find a genre that does not exist
         Optional<Genre> foundGenre = genreRepository.findByName("NonExistent");
 
-        // Assert that no genre is found
         assertFalse(foundGenre.isPresent(), "Genre should not be found");
     }
 
@@ -60,7 +58,6 @@ class GenreRepositoryTest {
 
         Genre savedGenre = genreRepository.save(comedyGenre);
 
-        // Assert that the saved genre has an ID and name as expected
         assertNotNull(savedGenre.getId(), "Saved genre should have a generated ID");
         assertEquals("Comedy", savedGenre.getName(), "Saved genre name should match");
     }
@@ -75,10 +72,8 @@ class GenreRepositoryTest {
         genreRepository.save(genreToDelete);
         genreRepository.delete(genreToDelete);
 
-        // Try to find the deleted genre
         Optional<Genre> deletedGenre = genreRepository.findByName("Horror");
 
-        // Assert that the genre is no longer present
         assertFalse(deletedGenre.isPresent(), "Deleted genre should not be found");
     }
 

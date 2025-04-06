@@ -31,5 +31,5 @@ public class Ranking {
     private Movie movie;
 
     private Integer rank1;
-    private Integer rank2;// The ranking value given by the user
+    private Integer rank2;
 }

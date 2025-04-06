@@ -46,6 +46,7 @@ public class MovieController {
     @Transactional
     public ResponseEntity<ResponseDTO> getMoviesByGenre(@RequestParam String genre) {
         logger.info("Request received to get movies for genre: {}", genre);
+        //Find movies by genre
         List<Movie> movies = movieRepository.findByGenre(genre);
         if (movies.isEmpty()) {
             logger.warn("No movies found for genre: {}", genre);
@@ -79,12 +80,14 @@ public class MovieController {
     @GetMapping("/by-min-ranking")
     public ResponseEntity<ResponseDTO> getMoviesByMinRanking(@RequestParam double minRanking) {
         logger.info("Request received to get movies with minimum ranking: {}", minRanking);
+        //Find movies by minimum ranking
         List<Movie> movies = movieRepository.findByMinRanking(minRanking);
         if (movies.isEmpty()) {
             logger.warn("No movies found with minimum ranking: {}", minRanking);
             return ResponseEntity.noContent().build();
         }
         logger.info("Found {} movies with minimum ranking: {}", movies.size(), minRanking);
+        //Return the movies and convert to DTOs
         List<MovieRequest> movieDTOs = movies.stream()
                 .map(movie -> {
                     MovieRequest movieDTO = new MovieRequest();
@@ -107,12 +110,13 @@ public class MovieController {
     @GetMapping("/by-max-ranking")
     public ResponseEntity<ResponseDTO> getMoviesByMaxRanking(@RequestParam double maxRanking) {
         logger.info("Request received to get movies with maximum ranking: {}", maxRanking);
+        //Find movies by maximum ranking
         List<Movie> movies = movieRepository.findByMaxRanking(maxRanking);
         if (movies.isEmpty()) {
             logger.warn("No movies found with maximum ranking: {}", maxRanking);
             return ResponseEntity.noContent().build();
         }
-
+        //Return the movies and convert to DTOs
         logger.info("Found {} movies with maximum ranking: {}", movies.size(), maxRanking);
         List<MovieRequest> movieDTOs = movies.stream()
                 .map(movie -> {
@@ -144,26 +148,27 @@ public class MovieController {
             @RequestParam(required = false) String keyword) {
         logger.info("Search request received with parameters - title: {}, genres: {}, keyword: {}",
                 title, genres, keyword);
+        //Create a results array and put all matching movies in it
         List<Movie> results = new ArrayList<>();
-
+        //Find movies using title
         if (title != null && !title.isBlank()) {
             logger.info("Searching for movies with title: {}", title);
             results.addAll(movieRepository.findByTitleIgnoreCase(title));
         }
-
+        //Find movies using genres
         if (genres != null && !genres.isEmpty()) {
             logger.info("Searching for movies with genres: {}", genres);
             results.addAll(movieRepository.findByGenres(new HashSet<>(genres)));
         }
-
+        //Find movies using a keyword in its name
         if (keyword != null && !keyword.isBlank()) {
             logger.info("Searching for movies containing keyword: {}", keyword);
             results.addAll(movieRepository.findByTitleContainingIgnoreCase(keyword));
         }
 
-        // Remove duplicates
+        //Remove duplicates form the result list
         List<Movie> distinctResults = results.stream().distinct().collect(Collectors.toList());
-
+        //Convert the list into movieDTOs
         List<MovieRequest> movieDTOs = distinctResults.stream()
                 .map(movie -> {
                     MovieRequest movieDTO = new MovieRequest();
@@ -191,6 +196,7 @@ public class MovieController {
     @PostMapping("/create")
     public ResponseEntity<MovieRequest> createMovie(@RequestBody MovieRequest movieRequest) {
         logger.info("Received request to create movie with title: {}", movieRequest.getTitle());
+        //Check if the movie title is not null and not empty
         if (movieRequest.getTitle() == null || movieRequest.getTitle().isBlank()) {
             logger.warn("Movie creation failed: Title is blank or null.");
             return ResponseEntity.badRequest().build();
@@ -203,14 +209,14 @@ public class MovieController {
                         .orElseGet(() -> genreRepository.save(Genre.builder().name(genreName).build())))
                 .collect(Collectors.toSet());
 
-        // Create and save the movie
+        //Create and save the movie
         Movie movie = new Movie();
         movie.setTitle(movieRequest.getTitle());
         movie.setGenres(genres);
 
         Movie savedMovie = movieRepository.save(movie);
 
-        // Prepare response DTO without the 'id'
+        //Return the movie using MovieDTO
         MovieRequest responseDTO = new MovieRequest();
         responseDTO.setTitle(savedMovie.getTitle());
         responseDTO.setGenres(savedMovie.getGenres().stream()
@@ -227,7 +233,7 @@ public class MovieController {
     @GetMapping
     public ResponseEntity<List<MovieRequest>> getAllMovies() {
         logger.info("Request received to get movies");
-
+        //Return all movies
         List<Movie> movies = movieRepository.findAll();
 
         List<MovieRequest> movieRequests = movies.stream().map(movie -> {
@@ -252,6 +258,7 @@ public class MovieController {
     @GetMapping("/{id}")
     public ResponseEntity<MovieRequest> getMovieById(@PathVariable Long id) {
         logger.info("Request received to get movie with id {}", id);
+        //Find the movie with matching id
         return movieRepository.findById(id)
                 .map(movie -> {
                     MovieRequest dto = new MovieRequest();
@@ -274,12 +281,13 @@ public class MovieController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteMovie(@PathVariable Long id) {
         logger.info("Request received to delete movie with id {}", id);
+        //Find movie with matching id
         if (movieRepository.existsById(id)) {
+            //Delete movie
             movieRepository.deleteById(id);
             return ResponseEntity.ok("Movie deleted successfully.");
-            // HTTP 204 No Content
         } else {
-            return ResponseEntity.notFound().build(); // HTTP 404 Not Found
+            return ResponseEntity.notFound().build();
         }
     }
 

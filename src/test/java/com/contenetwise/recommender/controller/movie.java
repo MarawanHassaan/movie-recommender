@@ -73,7 +73,6 @@ class MovieControllerTest {
                 .andExpect(jsonPath("$.title").value("New Movie"));
                 //.andExpect(jsonPath("$.genres[0].name").value("Action"));
 
-        // Verify repository interactions
         verify(movieRepository, times(1)).save(any(Movie.class));
         verify(genreRepository, times(1)).findByName(anyString());
     }

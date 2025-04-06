@@ -38,11 +38,12 @@ public class UserController {
     @PostMapping("/create")
     public ResponseEntity<UserDTOResponse> createUser(@RequestBody UserDTOResponse user) {
         logger.info("Create request received for user with username: {}", user.getUsername());
+        //Check if username is correct and not empty
         if (user.getUsername() == null || user.getUsername().isBlank()) {
             logger.warn("Invalid genre name provided: '{}'", user.getUsername());
             return ResponseEntity.badRequest().build();
         }
-
+        //Return the user
         Optional<User> existingUser = userRepository.findByUsername(user.getUsername());
         if (existingUser.isPresent()) {
             logger.warn("User with username '{}' already exists. Creation aborted.", user.getUsername());
@@ -66,6 +67,7 @@ public class UserController {
     @GetMapping
     public ResponseEntity<List<UserDTOResponse>> getAllUsers() {
         logger.info("Get request called for all users");
+        //Return all users
         List<UserDTOResponse> userDTOs = userRepository.findAll()
                 .stream()
                 .map(user -> new UserDTOResponse(user.getUsername()))
@@ -82,6 +84,7 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserDTOResponse> getUserById(@PathVariable Long id) {
         logger.info("Request called for user with ID: {}", id);
+        //Check if user exists or not
         return userRepository.findById(id)
                 .map(user -> {
                     logger.info("User found: {} with ID: {}", user.getUsername(), id);
@@ -102,6 +105,7 @@ public class UserController {
     @PutMapping("/{id}")
     public ResponseEntity<UserDTOResponse> updateUser(@PathVariable Long id, @RequestBody UserDTOResponse updatedUser) {
         logger.info("Update request received for user with ID: {}", id);
+        //Check if user exists or not
         return userRepository.findById(id)
                 .map(existingUser -> {
                     logger.info("User found with ID: {}. Updating username from '{}' to '{}'",
@@ -129,11 +133,12 @@ public class UserController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteUser(@PathVariable Long id) {
         logger.info("Delete request received for user with ID: {}", id);
+        //Check if user exists or not
         if (!userRepository.existsById(id)) {
             logger.warn("User with ID {} not found. Deletion aborted.", id);
             return ResponseEntity.notFound().build();
         }
-
+        //Delete the user
         userRepository.deleteById(id);
         logger.info("User with ID {} deleted successfully.", id);
         return ResponseEntity.ok("User deleted successfully.");

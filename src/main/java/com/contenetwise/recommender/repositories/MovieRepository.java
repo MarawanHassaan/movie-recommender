@@ -10,10 +10,12 @@ import java.util.List;
 import java.util.Set;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
-
+    //Find movie by genre
     @Query("SELECT m FROM Movie m JOIN m.genres g WHERE g.name = :genreName")
     List<Movie> findByGenre(@Param("genreName") String genreName);
 
+
+    //Find movies rated higher a minimum number
     @Query("""
     SELECT m FROM Movie m\s
     JOIN m.rankings r\s
@@ -37,6 +39,7 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
    \s""")
     List<Movie> findByMinRanking(@Param("minRanking") double minRanking);
 
+    //Find movies rated lower a maximum number
     @Query("""
     SELECT m FROM Movie m
     JOIN m.rankings r
@@ -62,18 +65,18 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
 
 
-
+    //Find movies by genre names
     @Query("SELECT m FROM Movie m JOIN m.genres g WHERE g.name IN :genreNames")
     List<Movie> findByGenreNames(@Param("genreNames") Set<String> genreNames);
 
-
+    //Find movies with title name
     List<Movie> findByTitleIgnoreCase(String title);
 
-    // Match movies by genres (if any genre matches)
+    // Match movies by genres
     @Query("SELECT DISTINCT m FROM Movie m JOIN m.genres g WHERE g.name IN :genres")
     List<Movie> findByGenres(@Param("genres") Set<String> genres);
 
-    // Match one or more words within the title
+    // Find movies based on keyword
     @Query("SELECT m FROM Movie m WHERE LOWER(m.title) LIKE LOWER(CONCAT('%', :keyword, '%'))")
     List<Movie> findByTitleContainingIgnoreCase(@Param("keyword") String keyword);
 

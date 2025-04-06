@@ -20,7 +20,7 @@ class UserTest {
 
     @BeforeEach
     void setUp() {
-        // Initialize User object
+        // Initialize User
         user = User.builder()
                 .id(1L)
                 .username("john_doe")
@@ -29,7 +29,7 @@ class UserTest {
 
     @Test
     void testUserConstruction() {
-        // Validate that the User object is correctly constructed
+        // Validate that the User object is correct
         assertNotNull(user);
         assertEquals(1L, user.getId());
         assertEquals("john_doe", user.getUsername());
@@ -39,7 +39,6 @@ class UserTest {
 
     @Test
     void testUserEqualsAndHashCode() {
-        // Testing equals and hashCode for correct entity comparison
         User user2 = User.builder()
                 .id(1L)
                 .username("john_doe")
@@ -50,23 +49,19 @@ class UserTest {
                 .username("jane_doe")
                 .build();
 
-        // Same values should be equal
         assertEquals(user.getUsername(), user2.getUsername());
 
-        // Different values should not be equal
         assertNotEquals(user.getUsername(), user3.getUsername());
     }
 
     @Test
     void testUserSetUsername() {
-        // Validate that the 'username' field can be set and retrieved correctly
         user.setUsername("new_username");
         assertEquals("new_username", user.getUsername());
     }
 
     @Test
     void testUserId() {
-        // Validate that the 'id' field is set and retrieved correctly
         user.setId(2L);
         assertEquals(2L, user.getId());
     }

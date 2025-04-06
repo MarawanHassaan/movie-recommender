@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
-@ActiveProfiles("test") // Automatically rolls back the transaction after each test
+@ActiveProfiles("test")
 class MovieRepositoryTest {
 
     @Autowired
@@ -37,21 +37,19 @@ class MovieRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        // Prepare genres
+        // Initialize genres
         actionGenre = Genre.builder().name("Action-test").build();
         comedyGenre = Genre.builder().name("Comedy-test").build();
         genreRepository.save(actionGenre);
         genreRepository.save(comedyGenre);
 
-        // Prepare movies
+        // Initialize movies
         actionMovie = Movie.builder().title("Action Movie").genres(new HashSet<>()).build();
         comedyMovie = Movie.builder().title("Comedy Movie").genres(new HashSet<>()).build();
 
-        // Associate movies with genres
         actionMovie.getGenres().add(actionGenre);
         comedyMovie.getGenres().add(comedyGenre);
 
-        // Save movies
         movieRepository.save(actionMovie);
         movieRepository.save(comedyMovie);
     }

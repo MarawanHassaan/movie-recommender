@@ -19,7 +19,7 @@ class GenreTest {
 
     @BeforeEach
     void setUp() {
-        // Initialize Genre object
+        // Initialize Genre
         genre = Genre.builder()
                 .id(1L)
                 .name("Action-test")
@@ -28,7 +28,6 @@ class GenreTest {
 
     @Test
     void testGenreConstruction() {
-        // Validate that the Genre object is correctly constructed
         assertNotNull(genre);
         assertEquals(1L, genre.getId());
         assertEquals("Action-test", genre.getName());
@@ -49,23 +48,19 @@ class GenreTest {
                 .name("Comedy-test")
                 .build();
 
-        // Same values should be equal
         assertEquals(genre.getName(), genre2.getName());
 
-        // Different values should not be equal
         assertNotEquals(genre.getName(), genre3.getName());
     }
 
     @Test
     void testGenreSetName() {
-        // Validate that the 'name' field can be set and retrieved correctly
         genre.setName("Drama");
         assertEquals("Drama", genre.getName());
     }
 
     @Test
     void testGenreId() {
-        // Validate that the 'id' field is set and retrieved correctly
         genre.setId(2L);
         assertEquals(2L, genre.getId());
     }

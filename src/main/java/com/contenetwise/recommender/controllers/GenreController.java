@@ -39,13 +39,13 @@ public class GenreController {
     public ResponseEntity<GenreDTOResponse> createGenre(@RequestBody GenreDTOResponse genre) {
         logger.info("Create request received for genre with name: {}", genre.getName());
 
-        // Validate the genre name
+        // Validate genre name
         if (genre.getName() == null || genre.getName().isBlank()) {
             logger.warn("Invalid genre name provided: '{}'", genre.getName());
             return ResponseEntity.badRequest().build();
         }
 
-        // Check if genre already exists
+        // Check if genre exists
         Optional<Genre> existingGenre = genreRepository.findByName(genre.getName());
         if (existingGenre.isPresent()) {
             logger.warn("Genre with name '{}' already exists. Creation aborted.", genre.getName());
@@ -69,8 +69,10 @@ public class GenreController {
     })
     @GetMapping
     public ResponseEntity<List<GenreDTOResponse>> getAllGenres() {
+        //Get the list of all genres
         List<Genre> genres = genreRepository.findAll();
         logger.info("Get request called for all genres");
+        //Convert the genres to GenreDTOResponse
         List<GenreDTOResponse> genreDTOs = genres.stream()
                 .map(genre -> new GenreDTOResponse(genre.getName()))
                 .collect(Collectors.toList());
@@ -85,6 +87,7 @@ public class GenreController {
     })
     @GetMapping("/{id}")
     public ResponseEntity<GenreDTOResponse> getGenreById(@PathVariable Long id) {
+        //Check if genre exists or not
         logger.info("Request called for genre with ID: {}", id);
         return genreRepository.findById(id)
                 .map(genre -> {
@@ -104,6 +107,7 @@ public class GenreController {
     })
     @PutMapping("/{id}")
     public ResponseEntity<GenreDTOResponse> updateGenre(@PathVariable Long id, @RequestBody GenreDTOResponse updatedGenre) {
+        //Check if genre exists or not
         logger.info("Update request received for genre with ID: {}", id);
         return genreRepository.findById(id)
                 .map(existingGenre -> {
@@ -130,11 +134,12 @@ public class GenreController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteGenre(@PathVariable Long id) {
         logger.info("Delete request received for genre with ID: {}", id);
+        //Check if genre exists or not
         if (!genreRepository.existsById(id)) {
             logger.warn("Genre with ID {} not found. Deletion aborted.", id);
             return ResponseEntity.notFound().build();
         }
-
+        //Delete the genre and return the response
         genreRepository.deleteById(id);
         logger.info("Genre with ID {} deleted successfully.", id);
         return ResponseEntity.ok("Genre deleted successfully.");

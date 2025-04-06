@@ -53,26 +53,29 @@ public class RankingController {
     public ResponseEntity<List<RankingDTOResponse>> getUserRankings(
             @PathVariable Long userId,
             @RequestParam(required = false, defaultValue = "both") String type) {
-
+        //Find all rankings given by user
         logger.info("Request received for user rankings with userId: {} and type: {}", userId, type);
         List<Ranking> rankings;
 
         switch (type.toLowerCase()) {
+            //return only ranks
             case "rank1":
                 logger.info("Fetching rankings for userId: {} with rank type 'rank1'", userId);
                 rankings = rankingRepository.findByUserRank1Only(userId);
                 break;
+            //return only views
             case "rank2":
                 logger.info("Fetching rankings for userId: {} with rank type 'rank2'", userId);
                 rankings = rankingRepository.findByUserRank2Only(userId);
                 break;
+            //return all rankings
             case "both":
             default:
                 logger.info("Fetching both rank types for userId: {}", userId);
                 rankings = rankingRepository.findByUser(userId);
                 break;
         }
-
+        //Check if the list is empty or not
         if (rankings.isEmpty()) {
             logger.warn("No rankings found for userId: {} with type: {}", userId, type);
             return ResponseEntity.noContent().build();
@@ -98,7 +101,6 @@ public class RankingController {
             @RequestParam(required = false) Integer rank2) {
 
         logger.info("Received request to create or update ranking for userId: {} and movieId: {}", userId, movieId);
-        // Validate rank1 and rank2 - at least one must be present, but not both
         if ((rank1 == null && rank2 == null) || (rank1 != null && rank2 != null)) {
             logger.warn("Bad request for userId: {} and movieId: {}. Both rank1 and rank2 are either null or both are provided.", userId, movieId);
             return ResponseEntity.badRequest().body("You must provide either rank1 or rank2, but not both.");
@@ -117,7 +119,7 @@ public class RankingController {
             return ResponseEntity.badRequest().body("Movie not found.");
         }
 
-        // Check if the ranking already exists
+        // Check if the ranking exists
         Ranking existingRanking = rankingRepository.findByUserAndMovie(user, movie).orElse(null);
 
         if (existingRanking != null) {
@@ -160,7 +162,7 @@ public class RankingController {
             return ResponseEntity.badRequest().build();
         }
 
-        // Get movies the user has rated highly (rank1 >= 4 or mapped rank2 >= 4)
+        // Get movies the user has rated highly (rank1 >= 4 or mapped viewing >= 4)
         List<Ranking> highlyRatedRankings = rankingRepository.findByUser(userId)
                 .stream()
                 .filter(r -> isHighlyRated(r))
@@ -177,10 +179,10 @@ public class RankingController {
                 .map(Genre::getName) // Convert Genre objects to names
                 .collect(Collectors.toSet());
 
-        // Find recommended movies by genre
+        // Find movies by genre
         List<Movie> recommendedMovies = movieRepository.findByGenreNames(preferredGenres);
 
-        // Exclude movies the user has already rated (either rank1 or rank2 exists)
+        // Exclude movies the user rated
         Set<Long> ratedMovieIds = rankingRepository.findByUser(userId).stream()
                 .map(r -> r.getMovie().getId())
                 .collect(Collectors.toSet());
@@ -189,7 +191,7 @@ public class RankingController {
                 .filter(movie -> !ratedMovieIds.contains(movie.getId())) // Exclude already rated
                 .collect(Collectors.toList());
 
-        // Optional: Sort by the number of times the movie was rated (popularity)
+        //Sort by movies by number of rates
         logger.info("Sorting recommended movies based on popularity for userId: {}", userId);
         filteredMovies.sort(Comparator.comparingInt(movie -> rankingRepository.countByMovie(movie)));
 
@@ -204,7 +206,7 @@ public class RankingController {
                 })
                 .collect(Collectors.toList());
 
-        // Wrap in ResponseDTO
+        //Return the answer to ResponseDTO
         logger.info("Returning recommendations for userId: {} with {} movies", userId, movieRequests.size());
         ResponseDTO response = new ResponseDTO();
         response.setMovies(movieRequests);
@@ -223,9 +225,7 @@ public class RankingController {
         return false;
     }
 
-    /**
-     * Maps rank2 (0-100) to a 1-5 scale.
-     */
+    //Maps View (0-100) to a 1-5 scale used for mappings
     private int mapRank2ToFiveScale(int rank2) {
         if (rank2 >= 81) return 5;
         if (rank2 >= 61) return 4;
