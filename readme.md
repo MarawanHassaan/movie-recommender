@@ -18,6 +18,7 @@ It tracks the movie, genre and user database. Besides it keeps track of rankings
 │   ├───grafana
 │   └───prometheus
 ├───logs
+├───docker-logs
 ├───public
 │   ├───database
 │   ├───grafana
