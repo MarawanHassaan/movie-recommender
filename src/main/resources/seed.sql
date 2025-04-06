@@ -1,3 +1,13 @@
+DELETE FROM movie_genre;
+DELETE FROM ranking;
+DELETE FROM genres;
+DELETE FROM movies;
+DELETE FROM users;
+
+SELECT setval(pg_get_serial_sequence('genres', 'id'), 1, false);
+SELECT setval(pg_get_serial_sequence('movies', 'id'), 1, false);
+SELECT setval(pg_get_serial_sequence('users', 'id'), 1, false);
+
 INSERT INTO users (username) VALUES
 ('Alice Johnson'),
 ('Bob Smith'),
